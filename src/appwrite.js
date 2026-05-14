@@ -1,7 +1,4 @@
 import { Client, Databases, Query, ID } from 'appwrite'
-import searchTerm from './App.jsx'
-import movie from './components/MovieCard.jsx'
-
 
 const DATABASE_ID = import.meta.env.VITE_APPWRITE_DATABASE_ID
 const COLLECTION_ID = import.meta.env.VITE_APPWRITE_COLLECTION_ID
@@ -40,5 +37,6 @@ export const getTrendingMovies = async() => {
     return result.documents
   } catch (error) {
     console.log(error)
+    return []
   }
 }
